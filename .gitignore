@@ -1,0 +1,16 @@
+.rebel_readline_history
+.cpcache/
+.env
+
+docs/quick-start/go/flare
+docs/quick-start/nodejs/package-lock.json
+docs/quick-start/nodejs/node_modules/
+
+docs/quick-start/php/composer.lock
+docs/quick-start/php/vendor/
+
+docs/quick-start/ruby/Gemfile.lock
+
+*.pyc
+.pytest_cache/
+__pycache__/
