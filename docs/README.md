@@ -12,17 +12,14 @@ Ensure you have [Java](https://clojure.org/guides/install_clojure#java) and [Clo
 
 ```bash
 cp .env.example .env
-
 ```
 
 ```bash
 clj -M:run
-
 ```
 
 ```text
 [main] INFO flare.components.server - Starting server on http://0.0.0.0:3042 as peer
-
 ```
 
 Ensure you have [curl](https://github.com/curl/curl), [bb](https://github.com/babashka/babashka), and [jq](https://github.com/jqlang/jq) installed.
@@ -134,7 +131,6 @@ git clone https://github.com/gbaptista/datomic-pro-docker.git
 cd datomic-pro-docker
 
 cp compose/postgresql.yml docker-compose.yml
-
 ```
 
 Start PostgreSQL as Datomic's storage service:
@@ -143,7 +139,6 @@ Start PostgreSQL as Datomic's storage service:
 docker compose up -d datomic-storage
 
 docker compose logs -f datomic-storage
-
 ```
 
 Create the table for Datomic databases:
@@ -154,7 +149,6 @@ docker compose run datomic-tools psql \
   -h datomic-storage \
   -U datomic-user \
   -d my-datomic-storage
-
 ```
 
 You will be prompted for a password, which is `unsafe`.
@@ -165,7 +159,6 @@ Start the Datomic Transactor:
 docker compose up -d datomic-transactor
 
 docker compose logs -f datomic-transactor
-
 ```
 
 Create your database named `my-datomic-database`:
@@ -178,7 +171,6 @@ docker compose run datomic-tools clojure -M -e "$(cat <<'CLOJURE'
   (System/exit 0)
 CLOJURE
 )"
-
 ```
 
 Your Datomic database is ready to start using Flare in _Peer Mode_:
@@ -189,7 +181,6 @@ graph RL
     Flare("Flare (Peer)") -.- Storage
     Flare --- Transactor
     Application([Application]) --- Flare
-
 ```
 
 If you want to use _Client Mode_, start a Datomic Peer Server:
@@ -198,7 +189,6 @@ If you want to use _Client Mode_, start a Datomic Peer Server:
 docker compose up -d datomic-peer-server
 
 docker compose logs -f datomic-peer-server
-
 ```
 
 Your Datomic database is ready to start using Flare in _Client Mode_:
@@ -210,7 +200,6 @@ graph RL
     PeerServer -.- Storage
     Flare(Flare) --- PeerServer[Peer Server]
     Application([Application]) --- Flare
-
 ```
 
 ### Running Flare
@@ -221,7 +210,6 @@ With [Datomic running](#running-datomic), you are ready to run Flare:
 git clone https://github.com/gbaptista/datomic-flare.git
 
 cd datomic-flare
-
 ```
 
 The server can operate in _Peer Mode_, embedding `com.datomic/peer` to establish a _Peer_ directly within the server, or in _Client Mode_, using `com.datomic/client-pro` to connect to a Datomic Peer Server.
@@ -230,7 +218,6 @@ Copy the `.env.example` file and fill it with the appropriate information.
 
 ```bash
 cp .env.example .env
-
 ```
 
 If you want _Peer Mode_:
@@ -241,7 +228,6 @@ FLARE_BIND=0.0.0.0
 FLARE_MODE=peer
 
 FLARE_PEER_CONNECTION_URI="datomic:sql://my-datomic-database?jdbc:postgresql://localhost:5432/my-datomic-storage?user=datomic-user&password=unsafe"
-
 ```
 
 If you want _Client Mode_:
@@ -255,7 +241,6 @@ FLARE_CLIENT_ENDPOINT=localhost:8998
 FLARE_CLIENT_SECRET=unsafe-secret
 FLARE_CLIENT_ACCESS_KEY=unsafe-key
 FLARE_CLIENT_DATABASE_NAME=my-datomic-database
-
 ```
 
 Ensure you have [Java](https://clojure.org/guides/install_clojure#java) and [Clojure](https://clojure.org/guides/install_clojure) installed.
@@ -264,12 +249,10 @@ Run the server:
 
 ```bash
 clj -M:run
-
 ```
 
 ```text
 [main] INFO flare.components.server - Starting server on http://0.0.0.0:3042 as peer
-
 ```
 
 Ensure you have [curl](https://github.com/curl/curl), [bb](https://github.com/babashka/babashka), and [jq](https://github.com/jqlang/jq) installed, and you should be able to start firing requests to the server:
@@ -386,7 +369,6 @@ curl -s http://localhost:3042/datomic/get-database-names \
   -X GET \
   -H "Content-Type: application/json"  \
 | jq
-
 ```
 
 Flare on _Client Mode_:
@@ -395,7 +377,6 @@ curl -s http://localhost:3042/datomic/list-databases \
   -X GET \
   -H "Content-Type: application/json"  \
 | jq
-
 ```
 
 ```json
@@ -404,7 +385,6 @@ curl -s http://localhost:3042/datomic/list-databases \
     "my-datomic-database"
   ]
 }
-
 ```
 
 ### Transacting Schema
@@ -442,10 +422,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@318b9570",
-    "db-after": "datomic.db.Db@6479fdab",
+    "db-before": "datomic.db.Db@321b1b31",
+    "db-after": "datomic.db.Db@5b98d113",
     "tx-data": [
-      [13194139534315, 50, "2024-09-29T13:15:50.596Z", 13194139534315, true],
+      [13194139534315, 50, "2024-09-29T14:29:23.230Z", 13194139534315, true],
       [74, 10, ":book/published_at_year", 13194139534315, true],
       [74, 40, 22, 13194139534315, true],
       [74, 41, 35, 13194139534315, true],
@@ -453,9 +433,9 @@ JSON
       [0, 13, 74, 13194139534315, true]
     ],
     "tempids": {
-      "-9223300668110592351": 72,
-      "-9223300668110592350": 73,
-      "-9223300668110592349": 74
+      "-9223300668110558576": 72,
+      "-9223300668110558575": 73,
+      "-9223300668110558574": 74
     }
   }
 }
@@ -486,10 +466,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@5a3f171e",
-    "db-after": "datomic.db.Db@1763c2d9",
+    "db-before": "datomic.db.Db@555f2410",
+    "db-after": "datomic.db.Db@5160ba63",
     "tx-data": [
-      [13194139534316, 50, "2024-09-29T13:15:50.614Z", 13194139534316, true],
+      [13194139534316, 50, "2024-09-29T14:29:23.245Z", 13194139534316, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534316, true],
       [4611681620380877805, 73, "Romance", 13194139534316, true],
       [4611681620380877805, 74, 1813, 13194139534316, true]
@@ -533,10 +513,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@4d76396e",
-    "db-after": "datomic.db.Db@48e3e868",
+    "db-before": "datomic.db.Db@14622e2b",
+    "db-after": "datomic.db.Db@9ef65fd",
     "tx-data": [
-      [13194139534318, 50, "2024-09-29T13:15:50.633Z", 13194139534318, true],
+      [13194139534318, 50, "2024-09-29T14:29:23.262Z", 13194139534318, true],
       [4611681620380877807, 72, "Near to the Wild Heart", 13194139534318, true],
       [4611681620380877807, 73, "Novel", 13194139534318, true],
       [4611681620380877807, 74, 1943, 13194139534318, true],
@@ -711,10 +691,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@46241f04",
-    "db-after": "datomic.db.Db@421b8318",
+    "db-before": "datomic.db.Db@25bcbf74",
+    "db-after": "datomic.db.Db@71dbaa02",
     "tx-data": [
-      [13194139534322, 50, "2024-09-29T13:15:50.701Z", 13194139534322, true],
+      [13194139534322, 50, "2024-09-29T14:29:23.325Z", 13194139534322, true],
       [4611681620380877806, 73, "Gothic", 13194139534322, true]
     ],
     "tempids": {
@@ -747,10 +727,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@719153f",
-    "db-after": "datomic.db.Db@50ee0d1c",
+    "db-before": "datomic.db.Db@744dd164",
+    "db-after": "datomic.db.Db@6ff929d",
     "tx-data": [
-      [13194139534323, 50, "2024-09-29T13:15:50.716Z", 13194139534323, true],
+      [13194139534323, 50, "2024-09-29T14:29:23.339Z", 13194139534323, true],
       [4611681620380877806, 73, "Gothic", 13194139534323, false]
     ],
     "tempids": {
@@ -781,10 +761,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@36d4f43a",
-    "db-after": "datomic.db.Db@28c9b2bb",
+    "db-before": "datomic.db.Db@4678ca29",
+    "db-after": "datomic.db.Db@6adfe35e",
     "tx-data": [
-      [13194139534324, 50, "2024-09-29T13:15:50.732Z", 13194139534324, true]
+      [13194139534324, 50, "2024-09-29T14:29:23.351Z", 13194139534324, true]
     ],
     "tempids": {
     }
@@ -814,10 +794,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@6736ea70",
-    "db-after": "datomic.db.Db@47108d67",
+    "db-before": "datomic.db.Db@7003c990",
+    "db-after": "datomic.db.Db@a92c677",
     "tx-data": [
-      [13194139534325, 50, "2024-09-29T13:15:50.748Z", 13194139534325, true],
+      [13194139534325, 50, "2024-09-29T14:29:23.366Z", 13194139534325, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534325, false],
       [4611681620380877805, 73, "Romance", 13194139534325, false],
       [4611681620380877805, 74, 1813, 13194139534325, false]
@@ -855,7 +835,6 @@ curl -s http://localhost:3042/datomic/datoms \
     [0, 11, 4, 0, true]
   ]
 }
-
 ```
 
 ## Architecture
@@ -869,7 +848,6 @@ graph RL
     Flare("Flare (Peer)") -.- Storage
     Flare --- Transactor
     Application([Application]) --- Flare
-
 ```
 
 ```mermaid
@@ -883,7 +861,6 @@ graph RL
     ApplicationB([Application]) --- FlareA
     ApplicationC([Application]) --- FlareB
     ApplicationD([Application]) --- FlareB
-
 ```
 
 ### Peer Servers
@@ -894,7 +871,6 @@ graph RL
     PeerServer -.- Storage
     Flare(Flare) --- PeerServer[Peer Server]
     Application([Application]) --- Flare
-
 ```
 
 ```mermaid
@@ -908,7 +884,6 @@ graph RL
     ApplicationB([Application]) --- FlareA
     ApplicationC([Application]) --- FlareB
     ApplicationD([Application]) --- FlareB
-
 ```
 
 ```mermaid
@@ -930,7 +905,6 @@ graph RL
     ApplicationF([Application]) --- FlareC
     ApplicationG([Application]) --- FlareD
     ApplicationH([Application]) --- FlareD
-
 ```
 
 ## About
@@ -971,22 +945,18 @@ Future HTTP evolutions may address this use case, such as the proposed HTTP [`QU
 
 ```bash
 clj -M:run
-
 ```
 
 ```bash
 clj -M:repl
-
 ```
 
 ```bash
 clj -M:format
 clj -M:lint
-
 ```
 
 ```bash
 cljfmt fix deps.edn src/
 clj-kondo --lint deps.edn src/
-
 ```
