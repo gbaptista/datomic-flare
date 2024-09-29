@@ -442,10 +442,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@4bc2a0c2",
-    "db-after": "datomic.db.Db@7b9cd770",
+    "db-before": "datomic.db.Db@318b9570",
+    "db-after": "datomic.db.Db@6479fdab",
     "tx-data": [
-      [13194139534315, 50, "2024-09-29T12:42:45.716Z", 13194139534315, true],
+      [13194139534315, 50, "2024-09-29T13:15:50.596Z", 13194139534315, true],
       [74, 10, ":book/published_at_year", 13194139534315, true],
       [74, 40, 22, 13194139534315, true],
       [74, 41, 35, 13194139534315, true],
@@ -453,9 +453,9 @@ JSON
       [0, 13, 74, 13194139534315, true]
     ],
     "tempids": {
-      "-9223300668110426910": 72,
-      "-9223300668110426909": 73,
-      "-9223300668110426908": 74
+      "-9223300668110592351": 72,
+      "-9223300668110592350": 73,
+      "-9223300668110592349": 74
     }
   }
 }
@@ -486,10 +486,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@53650c4f",
-    "db-after": "datomic.db.Db@43aaf97c",
+    "db-before": "datomic.db.Db@5a3f171e",
+    "db-after": "datomic.db.Db@1763c2d9",
     "tx-data": [
-      [13194139534316, 50, "2024-09-29T12:42:45.732Z", 13194139534316, true],
+      [13194139534316, 50, "2024-09-29T13:15:50.614Z", 13194139534316, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534316, true],
       [4611681620380877805, 73, "Romance", 13194139534316, true],
       [4611681620380877805, 74, 1813, 13194139534316, true]
@@ -533,10 +533,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@2dd0b0f4",
-    "db-after": "datomic.db.Db@306ad569",
+    "db-before": "datomic.db.Db@4d76396e",
+    "db-after": "datomic.db.Db@48e3e868",
     "tx-data": [
-      [13194139534318, 50, "2024-09-29T12:42:45.752Z", 13194139534318, true],
+      [13194139534318, 50, "2024-09-29T13:15:50.633Z", 13194139534318, true],
       [4611681620380877807, 72, "Near to the Wild Heart", 13194139534318, true],
       [4611681620380877807, 73, "Novel", 13194139534318, true],
       [4611681620380877807, 74, 1943, 13194139534318, true],
@@ -711,10 +711,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@4b16a05f",
-    "db-after": "datomic.db.Db@5f63d158",
+    "db-before": "datomic.db.Db@46241f04",
+    "db-after": "datomic.db.Db@421b8318",
     "tx-data": [
-      [13194139534322, 50, "2024-09-29T12:42:45.820Z", 13194139534322, true],
+      [13194139534322, 50, "2024-09-29T13:15:50.701Z", 13194139534322, true],
       [4611681620380877806, 73, "Gothic", 13194139534322, true]
     ],
     "tempids": {
@@ -747,10 +747,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@771c9d50",
-    "db-after": "datomic.db.Db@11bbcf47",
+    "db-before": "datomic.db.Db@719153f",
+    "db-after": "datomic.db.Db@50ee0d1c",
     "tx-data": [
-      [13194139534323, 50, "2024-09-29T12:42:45.835Z", 13194139534323, true],
+      [13194139534323, 50, "2024-09-29T13:15:50.716Z", 13194139534323, true],
       [4611681620380877806, 73, "Gothic", 13194139534323, false]
     ],
     "tempids": {
@@ -781,10 +781,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@6f518177",
-    "db-after": "datomic.db.Db@2ef964d4",
+    "db-before": "datomic.db.Db@36d4f43a",
+    "db-after": "datomic.db.Db@28c9b2bb",
     "tx-data": [
-      [13194139534324, 50, "2024-09-29T12:42:45.850Z", 13194139534324, true]
+      [13194139534324, 50, "2024-09-29T13:15:50.732Z", 13194139534324, true]
     ],
     "tempids": {
     }
@@ -814,10 +814,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@3d9c9a46",
-    "db-after": "datomic.db.Db@7292ab45",
+    "db-before": "datomic.db.Db@6736ea70",
+    "db-after": "datomic.db.Db@47108d67",
     "tx-data": [
-      [13194139534325, 50, "2024-09-29T12:42:45.865Z", 13194139534325, true],
+      [13194139534325, 50, "2024-09-29T13:15:50.748Z", 13194139534325, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534325, false],
       [4611681620380877805, 73, "Romance", 13194139534325, false],
       [4611681620380877805, 74, 1813, 13194139534325, false]
@@ -852,8 +852,7 @@ curl -s http://localhost:3042/datomic/datoms \
     [0, 10, "db", 0, true],
     [0, 11, 0, 54, true],
     [0, 11, 3, 0, true],
-    [0, 11, 4, 0, true],
-    // ...
+    [0, 11, 4, 0, true]
   ]
 }
 
