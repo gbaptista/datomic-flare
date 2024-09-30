@@ -177,7 +177,7 @@ Your Datomic database is ready to start using Flare in _Peer Mode_:
 
 ```mermaid
 graph RL
-    Transactor --- Storage
+    Transactor --- Storage[("Storage")]
     Flare("Flare (Peer)") -.- Storage
     Flare --- Transactor
     Application([Application]) --- Flare
@@ -195,7 +195,7 @@ Your Datomic database is ready to start using Flare in _Client Mode_:
 
 ```mermaid
 graph RL
-    Transactor --- Storage
+    Transactor --- Storage[("Storage")]
     PeerServer --- Transactor
     PeerServer -.- Storage
     Flare(Flare) --- PeerServer[Peer Server]
@@ -844,7 +844,7 @@ Here are samples of how you may deploy Flare in your infrastructure.
 ### Embedded Peers
 ```mermaid
 graph RL
-    Transactor --- Storage[(Storage)]
+    Transactor --- Storage[("Storage")][(Storage)]
     Flare("Flare (Peer)") -.- Storage
     Flare --- Transactor
     Application([Application]) --- Flare
@@ -852,7 +852,7 @@ graph RL
 
 ```mermaid
 graph RL
-    Transactor --- Storage[(Storage)]
+    Transactor --- Storage[("Storage")][(Storage)]
     FlareA("Flare (Peer)") -.- Storage
     FlareB("Flare (Peer)") -.- Storage
     FlareA --- Transactor
@@ -866,7 +866,7 @@ graph RL
 ### Peer Servers
 ```mermaid
 graph RL
-    Transactor --- Storage[(Storage)]
+    Transactor --- Storage[("Storage")][(Storage)]
     PeerServer --- Transactor
     PeerServer -.- Storage
     Flare(Flare) --- PeerServer[Peer Server]
@@ -875,7 +875,7 @@ graph RL
 
 ```mermaid
 graph RL
-    Transactor --- Storage[(Storage)]
+    Transactor --- Storage[("Storage")][(Storage)]
     PeerServer --- Transactor
     PeerServer -.- Storage
     FlareA(Flare) --- PeerServer[Peer Server]
@@ -888,7 +888,7 @@ graph RL
 
 ```mermaid
 graph RL
-    Transactor --- Storage[(Storage)]
+    Transactor --- Storage[("Storage")][(Storage)]
     PeerServerA[Peer Server] --- Transactor
     PeerServerA -.- Storage
     PeerServerB[Peer Server] --- Transactor
