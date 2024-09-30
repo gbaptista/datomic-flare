@@ -130,7 +130,7 @@ git clone https://github.com/gbaptista/datomic-pro-docker.git
 
 cd datomic-pro-docker
 
-cp compose/postgresql.yml docker-compose.yml
+cp compose/datomic-postgresql.yml docker-compose.yml
 ```
 
 Start PostgreSQL as Datomic's storage service:
@@ -177,7 +177,7 @@ Your Datomic database is ready to start using Flare in _Peer Mode_:
 
 ```mermaid
 graph RL
-    Transactor --- Storage[(PostgreSQL)]
+    Transactor --- Storage
     Flare("Flare (Peer)") -.- Storage
     Flare --- Transactor
     Application([Application]) --- Flare
@@ -195,7 +195,7 @@ Your Datomic database is ready to start using Flare in _Client Mode_:
 
 ```mermaid
 graph RL
-    Transactor --- Storage[(PostgreSQL)]
+    Transactor --- Storage
     PeerServer --- Transactor
     PeerServer -.- Storage
     Flare(Flare) --- PeerServer[Peer Server]
