@@ -116,10 +116,16 @@ Create the table for Datomic databases:
 
 ```bash
 docker compose run datomic-tools psql \
-  -f bin/sql/postgres-table.sql \
   -h datomic-storage \
   -U datomic-user \
-  -d my-datomic-storage
+  -d my-datomic-storage \
+  -c 'CREATE TABLE datomic_kvs (
+        id TEXT NOT NULL,
+        rev INTEGER,
+        map TEXT,
+        val BYTEA,
+        CONSTRAINT pk_id PRIMARY KEY (id)
+      );'
 ```
 
 You will be prompted for a password, which is `unsafe`.

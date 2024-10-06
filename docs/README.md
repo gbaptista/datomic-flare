@@ -145,10 +145,16 @@ Create the table for Datomic databases:
 
 ```bash
 docker compose run datomic-tools psql \
-  -f bin/sql/postgres-table.sql \
   -h datomic-storage \
   -U datomic-user \
-  -d my-datomic-storage
+  -d my-datomic-storage \
+  -c 'CREATE TABLE datomic_kvs (
+        id TEXT NOT NULL,
+        rev INTEGER,
+        map TEXT,
+        val BYTEA,
+        CONSTRAINT pk_id PRIMARY KEY (id)
+      );'
 ```
 
 You will be prompted for a password, which is `unsafe`.
@@ -422,10 +428,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@6b883fe0",
-    "db-after": "datomic.db.Db@613c7ab1",
+    "db-before": "datomic.db.Db@6c2743f5",
+    "db-after": "datomic.db.Db@7b188823",
     "tx-data": [
-      [13194139534315, 50, "2024-10-06T13:21:23.583Z", 13194139534315, true],
+      [13194139534315, 50, "2024-10-06T13:23:28.602Z", 13194139534315, true],
       [74, 10, ":book/published_at_year", 13194139534315, true],
       [74, 40, 22, 13194139534315, true],
       [74, 41, 35, 13194139534315, true],
@@ -433,9 +439,9 @@ JSON
       [0, 13, 74, 13194139534315, true]
     ],
     "tempids": {
-      "-9223300668110597902": 72,
-      "-9223300668110597901": 73,
-      "-9223300668110597900": 74
+      "-9223300668110597889": 72,
+      "-9223300668110597888": 73,
+      "-9223300668110597887": 74
     }
   }
 }
@@ -466,10 +472,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@7c03ea2e",
-    "db-after": "datomic.db.Db@3c3bce6e",
+    "db-before": "datomic.db.Db@75d129e2",
+    "db-after": "datomic.db.Db@21369e69",
     "tx-data": [
-      [13194139534316, 50, "2024-10-06T13:21:23.603Z", 13194139534316, true],
+      [13194139534316, 50, "2024-10-06T13:23:28.618Z", 13194139534316, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534316, true],
       [4611681620380877805, 73, "Romance", 13194139534316, true],
       [4611681620380877805, 74, 1813, 13194139534316, true]
@@ -513,10 +519,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@16669136",
-    "db-after": "datomic.db.Db@148d98b9",
+    "db-before": "datomic.db.Db@55451c2f",
+    "db-after": "datomic.db.Db@6a23cf34",
     "tx-data": [
-      [13194139534318, 50, "2024-10-06T13:21:23.621Z", 13194139534318, true],
+      [13194139534318, 50, "2024-10-06T13:23:28.636Z", 13194139534318, true],
       [4611681620380877807, 72, "Near to the Wild Heart", 13194139534318, true],
       [4611681620380877807, 73, "Novel", 13194139534318, true],
       [4611681620380877807, 74, 1943, 13194139534318, true],
@@ -691,10 +697,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@773c429c",
-    "db-after": "datomic.db.Db@1516baab",
+    "db-before": "datomic.db.Db@164175ab",
+    "db-after": "datomic.db.Db@31164dc",
     "tx-data": [
-      [13194139534322, 50, "2024-10-06T13:21:23.685Z", 13194139534322, true],
+      [13194139534322, 50, "2024-10-06T13:23:28.701Z", 13194139534322, true],
       [4611681620380877806, 73, "Gothic", 13194139534322, true]
     ],
     "tempids": {
@@ -727,10 +733,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@375b761e",
-    "db-after": "datomic.db.Db@4feb781c",
+    "db-before": "datomic.db.Db@7e48b4f5",
+    "db-after": "datomic.db.Db@ae68e67",
     "tx-data": [
-      [13194139534323, 50, "2024-10-06T13:21:23.702Z", 13194139534323, true],
+      [13194139534323, 50, "2024-10-06T13:23:28.715Z", 13194139534323, true],
       [4611681620380877806, 73, "Gothic", 13194139534323, false]
     ],
     "tempids": {
@@ -761,10 +767,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@5a56fbdf",
-    "db-after": "datomic.db.Db@7a35c1dc",
+    "db-before": "datomic.db.Db@17175ebd",
+    "db-after": "datomic.db.Db@1f28ff07",
     "tx-data": [
-      [13194139534324, 50, "2024-10-06T13:21:23.717Z", 13194139534324, true]
+      [13194139534324, 50, "2024-10-06T13:23:28.729Z", 13194139534324, true]
     ],
     "tempids": {
     }
@@ -794,10 +800,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@16b2a302",
-    "db-after": "datomic.db.Db@28d1250",
+    "db-before": "datomic.db.Db@24fc1f0b",
+    "db-after": "datomic.db.Db@1ad72845",
     "tx-data": [
-      [13194139534325, 50, "2024-10-06T13:21:23.732Z", 13194139534325, true],
+      [13194139534325, 50, "2024-10-06T13:23:28.745Z", 13194139534325, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534325, false],
       [4611681620380877805, 73, "Romance", 13194139534325, false],
       [4611681620380877805, 74, 1813, 13194139534325, false]
