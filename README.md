@@ -1,4 +1,4 @@
-# Datomic Flare
+# Flare
 
 A web server that offers an HTTP/JSON API for interacting with [Datomic](https://www.datomic.com) databases.
 
@@ -779,7 +779,7 @@ print(response.json())
 
 ### Ruby
 
-You might want to check out the [Datomic Flare](https://github.com/gbaptista/ruby-datomic-flare) Ruby Gem.
+You might want to check out the [Flare](https://github.com/gbaptista/ruby-datomic-flare) Ruby Gem.
 
 Create a `Gemfile` file:
 
@@ -988,10 +988,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@321b1b31",
-    "db-after": "datomic.db.Db@5b98d113",
+    "db-before": "datomic.db.Db@5b93e745",
+    "db-after": "datomic.db.Db@1ac7b978",
     "tx-data": [
-      [13194139534315, 50, "2024-09-29T14:29:23.230Z", 13194139534315, true],
+      [13194139534315, 50, "2024-10-06T13:17:40.354Z", 13194139534315, true],
       [74, 10, ":book/published_at_year", 13194139534315, true],
       [74, 40, 22, 13194139534315, true],
       [74, 41, 35, 13194139534315, true],
@@ -999,9 +999,9 @@ JSON
       [0, 13, 74, 13194139534315, true]
     ],
     "tempids": {
-      "-9223300668110558576": 72,
-      "-9223300668110558575": 73,
-      "-9223300668110558574": 74
+      "-9223300668110597915": 72,
+      "-9223300668110597914": 73,
+      "-9223300668110597913": 74
     }
   }
 }
@@ -1032,10 +1032,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@555f2410",
-    "db-after": "datomic.db.Db@5160ba63",
+    "db-before": "datomic.db.Db@303b5f6d",
+    "db-after": "datomic.db.Db@6266e1f2",
     "tx-data": [
-      [13194139534316, 50, "2024-09-29T14:29:23.245Z", 13194139534316, true],
+      [13194139534316, 50, "2024-10-06T13:17:40.374Z", 13194139534316, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534316, true],
       [4611681620380877805, 73, "Romance", 13194139534316, true],
       [4611681620380877805, 74, 1813, 13194139534316, true]
@@ -1079,10 +1079,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@14622e2b",
-    "db-after": "datomic.db.Db@9ef65fd",
+    "db-before": "datomic.db.Db@615fa61a",
+    "db-after": "datomic.db.Db@46f4cf30",
     "tx-data": [
-      [13194139534318, 50, "2024-09-29T14:29:23.262Z", 13194139534318, true],
+      [13194139534318, 50, "2024-10-06T13:17:40.397Z", 13194139534318, true],
       [4611681620380877807, 72, "Near to the Wild Heart", 13194139534318, true],
       [4611681620380877807, 73, "Novel", 13194139534318, true],
       [4611681620380877807, 74, 1943, 13194139534318, true],
@@ -1257,10 +1257,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@25bcbf74",
-    "db-after": "datomic.db.Db@71dbaa02",
+    "db-before": "datomic.db.Db@2c5e30b4",
+    "db-after": "datomic.db.Db@79622dbc",
     "tx-data": [
-      [13194139534322, 50, "2024-09-29T14:29:23.325Z", 13194139534322, true],
+      [13194139534322, 50, "2024-10-06T13:17:40.479Z", 13194139534322, true],
       [4611681620380877806, 73, "Gothic", 13194139534322, true]
     ],
     "tempids": {
@@ -1293,10 +1293,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@744dd164",
-    "db-after": "datomic.db.Db@6ff929d",
+    "db-before": "datomic.db.Db@65113bfc",
+    "db-after": "datomic.db.Db@57cf521",
     "tx-data": [
-      [13194139534323, 50, "2024-09-29T14:29:23.339Z", 13194139534323, true],
+      [13194139534323, 50, "2024-10-06T13:17:40.497Z", 13194139534323, true],
       [4611681620380877806, 73, "Gothic", 13194139534323, false]
     ],
     "tempids": {
@@ -1327,10 +1327,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@4678ca29",
-    "db-after": "datomic.db.Db@6adfe35e",
+    "db-before": "datomic.db.Db@587aaeaa",
+    "db-after": "datomic.db.Db@301d67d4",
     "tx-data": [
-      [13194139534324, 50, "2024-09-29T14:29:23.351Z", 13194139534324, true]
+      [13194139534324, 50, "2024-10-06T13:17:40.533Z", 13194139534324, true]
     ],
     "tempids": {
     }
@@ -1360,10 +1360,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@7003c990",
-    "db-after": "datomic.db.Db@a92c677",
+    "db-before": "datomic.db.Db@5c3f74f0",
+    "db-after": "datomic.db.Db@3e8847ab",
     "tx-data": [
-      [13194139534325, 50, "2024-09-29T14:29:23.366Z", 13194139534325, true],
+      [13194139534325, 50, "2024-10-06T13:17:40.551Z", 13194139534325, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534325, false],
       [4611681620380877805, 73, "Romance", 13194139534325, false],
       [4611681620380877805, 74, 1813, 13194139534325, false]

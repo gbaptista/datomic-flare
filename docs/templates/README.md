@@ -1,4 +1,4 @@
-# Datomic Flare
+# Flare
 
 A web server that offers an HTTP/JSON API for interacting with [Datomic](https://www.datomic.com) databases.
 

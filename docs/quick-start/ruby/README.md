@@ -1,6 +1,6 @@
 ### Ruby
 
-You might want to check out the [Datomic Flare](https://github.com/gbaptista/ruby-datomic-flare) Ruby Gem.
+You might want to check out the [Flare](https://github.com/gbaptista/ruby-datomic-flare) Ruby Gem.
 
 Create a `Gemfile` file:
 
