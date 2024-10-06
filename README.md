@@ -2,7 +2,7 @@
 
 A web server that offers an HTTP/JSON API for interacting with [Datomic](https://www.datomic.com) databases.
 
-![The image features a logo with curved lines forming a tesseract, suggesting distortion and movement like space-time.](https://media.githubusercontent.com/media/gbaptista/assets/refs/heads/main/datomic-flare/datomic-flare-canvas.png)
+![The image features a logo with curved lines forming a tesseract, suggesting distortion and movement like space-time.](https://raw.githubusercontent.com/gbaptista/assets/refs/heads/main/datomic-flare/datomic-flare-canvas.jpg)
 
 _This is not an official Datomic project or documentation and it is not affiliated with Datomic in any way._
 
@@ -988,10 +988,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@5b93e745",
-    "db-after": "datomic.db.Db@1ac7b978",
+    "db-before": "datomic.db.Db@6b883fe0",
+    "db-after": "datomic.db.Db@613c7ab1",
     "tx-data": [
-      [13194139534315, 50, "2024-10-06T13:17:40.354Z", 13194139534315, true],
+      [13194139534315, 50, "2024-10-06T13:21:23.583Z", 13194139534315, true],
       [74, 10, ":book/published_at_year", 13194139534315, true],
       [74, 40, 22, 13194139534315, true],
       [74, 41, 35, 13194139534315, true],
@@ -999,9 +999,9 @@ JSON
       [0, 13, 74, 13194139534315, true]
     ],
     "tempids": {
-      "-9223300668110597915": 72,
-      "-9223300668110597914": 73,
-      "-9223300668110597913": 74
+      "-9223300668110597902": 72,
+      "-9223300668110597901": 73,
+      "-9223300668110597900": 74
     }
   }
 }
@@ -1032,10 +1032,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@303b5f6d",
-    "db-after": "datomic.db.Db@6266e1f2",
+    "db-before": "datomic.db.Db@7c03ea2e",
+    "db-after": "datomic.db.Db@3c3bce6e",
     "tx-data": [
-      [13194139534316, 50, "2024-10-06T13:17:40.374Z", 13194139534316, true],
+      [13194139534316, 50, "2024-10-06T13:21:23.603Z", 13194139534316, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534316, true],
       [4611681620380877805, 73, "Romance", 13194139534316, true],
       [4611681620380877805, 74, 1813, 13194139534316, true]
@@ -1079,10 +1079,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@615fa61a",
-    "db-after": "datomic.db.Db@46f4cf30",
+    "db-before": "datomic.db.Db@16669136",
+    "db-after": "datomic.db.Db@148d98b9",
     "tx-data": [
-      [13194139534318, 50, "2024-10-06T13:17:40.397Z", 13194139534318, true],
+      [13194139534318, 50, "2024-10-06T13:21:23.621Z", 13194139534318, true],
       [4611681620380877807, 72, "Near to the Wild Heart", 13194139534318, true],
       [4611681620380877807, 73, "Novel", 13194139534318, true],
       [4611681620380877807, 74, 1943, 13194139534318, true],
@@ -1257,10 +1257,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@2c5e30b4",
-    "db-after": "datomic.db.Db@79622dbc",
+    "db-before": "datomic.db.Db@773c429c",
+    "db-after": "datomic.db.Db@1516baab",
     "tx-data": [
-      [13194139534322, 50, "2024-10-06T13:17:40.479Z", 13194139534322, true],
+      [13194139534322, 50, "2024-10-06T13:21:23.685Z", 13194139534322, true],
       [4611681620380877806, 73, "Gothic", 13194139534322, true]
     ],
     "tempids": {
@@ -1293,10 +1293,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@65113bfc",
-    "db-after": "datomic.db.Db@57cf521",
+    "db-before": "datomic.db.Db@375b761e",
+    "db-after": "datomic.db.Db@4feb781c",
     "tx-data": [
-      [13194139534323, 50, "2024-10-06T13:17:40.497Z", 13194139534323, true],
+      [13194139534323, 50, "2024-10-06T13:21:23.702Z", 13194139534323, true],
       [4611681620380877806, 73, "Gothic", 13194139534323, false]
     ],
     "tempids": {
@@ -1327,10 +1327,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@587aaeaa",
-    "db-after": "datomic.db.Db@301d67d4",
+    "db-before": "datomic.db.Db@5a56fbdf",
+    "db-after": "datomic.db.Db@7a35c1dc",
     "tx-data": [
-      [13194139534324, 50, "2024-10-06T13:17:40.533Z", 13194139534324, true]
+      [13194139534324, 50, "2024-10-06T13:21:23.717Z", 13194139534324, true]
     ],
     "tempids": {
     }
@@ -1360,10 +1360,10 @@ JSON
 ```json
 {
   "data": {
-    "db-before": "datomic.db.Db@5c3f74f0",
-    "db-after": "datomic.db.Db@3e8847ab",
+    "db-before": "datomic.db.Db@16b2a302",
+    "db-after": "datomic.db.Db@28d1250",
     "tx-data": [
-      [13194139534325, 50, "2024-10-06T13:17:40.551Z", 13194139534325, true],
+      [13194139534325, 50, "2024-10-06T13:21:23.732Z", 13194139534325, true],
       [4611681620380877805, 72, "Pride and Prejudice", 13194139534325, false],
       [4611681620380877805, 73, "Romance", 13194139534325, false],
       [4611681620380877805, 74, 1813, 13194139534325, false]

@@ -2,7 +2,7 @@
 
 A web server that offers an HTTP/JSON API for interacting with [Datomic](https://www.datomic.com) databases.
 
-![The image features a logo with curved lines forming a tesseract, suggesting distortion and movement like space-time.](https://media.githubusercontent.com/media/gbaptista/assets/refs/heads/main/datomic-flare/datomic-flare-canvas.png)
+![The image features a logo with curved lines forming a tesseract, suggesting distortion and movement like space-time.](https://raw.githubusercontent.com/gbaptista/assets/refs/heads/main/datomic-flare/datomic-flare-canvas.jpg)
 
 _This is not an official Datomic project or documentation and it is not affiliated with Datomic in any way._
 
